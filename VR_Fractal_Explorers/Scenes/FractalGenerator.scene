@@ -2,70 +2,16 @@
   "Id": "66c554e9-d475-40cd-a043-92268d0874f8",
   "GameObjects": [
     {
-      "Id": "50fc104f-4996-4424-9e07-d9086a2beff1",
-      "Name": "Environment",
-      "Enabled": true,
-      "Children": [
-        {
-          "Id": "57a05d99-1754-4a37-a84f-34340d980c10",
-          "Name": "Cubemap",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "EnvmapProbe",
-              "Bounds": {
-                "Mins": "-1024,-1024,-1024",
-                "Maxs": "1024,1024,1024"
-              },
-              "Feathering": 0.02,
-              "Projection": "Box",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "TintColor": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "Id": "48afa399-929c-4205-a011-ab7319ae110a",
-          "Name": "2D Skybox",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "SkyBox2D",
-              "SkyMaterial": "materials/skybox/light_test_sky_night_basic.vmat",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "Id": "eafefa0d-fd18-4aae-9acb-b0a9d161dbfc",
-          "Name": "Directional Light",
-          "Rotation": "0,0.3826835,0,0.9238795",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "DirectionalLight",
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "Shadows": true,
-              "SkyColor": "0.05882,0.07451,0.08235,1"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "Id": "52cfc793-0dbc-45a1-a641-c53f9e625eb2",
       "Name": "Main Camera",
-      "Position": "-300,0,75",
-      "Rotation": "0,0.1305262,0,0.9914449",
+      "Position": "-300,0,2.283676",
       "Enabled": true,
       "Components": [
         {
           "__type": "CameraComponent",
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
-          "FieldOfView": 80,
+          "FieldOfView": 60,
           "IsMainCamera": true,
           "Orthographic": false,
           "OrthographicHeight": 1204,
@@ -76,6 +22,23 @@
           "Viewport": "0,0,1,1",
           "ZFar": 10000,
           "ZNear": 10
+        }
+      ]
+    },
+    {
+      "Id": "eafefa0d-fd18-4aae-9acb-b0a9d161dbfc",
+      "Name": "Directional Light",
+      "Position": "0,0,200",
+      "Rotation": "-0.2459842,0.5938582,0.2931525,0.7077327",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
         }
       ]
     },
@@ -97,6 +60,11 @@
           "__type": "VRAnchor"
         }
       ]
+    },
+    {
+      "Id": "3b98abd5-79dc-4b28-aa61-523bac95aa1f",
+      "Name": "Generated Fractal",
+      "Enabled": true
     }
   ],
   "SceneProperties": {
@@ -122,6 +90,6 @@
   },
   "Title": "fractalgenerator",
   "Description": "",
-  "LastSaved": "2024-02-07T11:39:25.5587726-06:00",
+  "LastSaved": "2024-02-07T13:12:25.0073201-05:00",
   "__references": []
 }
