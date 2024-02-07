@@ -1,0 +1,17 @@
+{
+  "RootObject": {
+    "Id": "f99bf012-547f-4b56-af86-749c46d316b6",
+    "Name": "Object",
+    "Position": "-182.9494,37.51918,109.901",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "FractalComponent"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}
