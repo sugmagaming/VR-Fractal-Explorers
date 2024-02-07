@@ -49,6 +49,9 @@
       "Components": [
         {
           "__type": "FractalComponent"
+        },
+        {
+          "__type": "VRAnchor"
         }
       ]
     }
@@ -75,7 +78,7 @@
     }
   },
   "Title": null,
-  "Description": "",
-  "LastSaved": "2024-02-07T11:20:58.5583922-05:00",
+  "Description": null,
+  "LastSaved": "2024-02-07T11:50:43.6570302-05:00",
   "__references": []
 }
