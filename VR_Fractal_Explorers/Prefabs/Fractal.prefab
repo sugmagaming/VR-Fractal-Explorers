@@ -1,0 +1,25 @@
+{
+  "RootObject": {
+    "Id": "6713e003-82f4-4cb9-a702-dff9b0a1d189",
+    "Name": "fractal",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "ModelRenderer",
+        "BodyGroups": 18446744073709551615,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/cubemapcube.vmdl",
+        "RenderType": "Off",
+        "Tint": "1,1,1,1"
+      }
+    ],
+    "Children": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": [
+    "xenthio.cubemapcube"
+  ]
+}
