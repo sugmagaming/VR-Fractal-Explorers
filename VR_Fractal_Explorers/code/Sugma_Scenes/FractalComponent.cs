@@ -4,12 +4,15 @@ namespace SugmaScenes;
 
 public sealed class FractalComponent : Component
 {
+    [Property] public GameObject FractalObject { get; set; }
     [Property] public float Size { get; set; } = 100.0f;
-    [Property] public int Depth { get; set; } = 3;
+    [Property, Range(1,4)] public int Depth { get; set; } = 3;
 
-    protected override void OnEnabled()
+    private GameObject Root = new GameObject( true, "Generated Fractal" );
+
+    protected override void OnStart()
     {
-        base.OnEnabled();
+        base.OnStart();
 
         SpawnFractal();
     }
@@ -17,14 +20,7 @@ public sealed class FractalComponent : Component
     public void SpawnFractal( Vector3 position, float size, int depth )
     {
         // Create a new cube at the given position
-        var go = new GameObject();
-        go.Components.Create<ModelRenderer>();
-
-        var cube = go.Components.Get<ModelRenderer>();
-
-        cube.Model = Model.Load( "models/dev/box.vmdl_c" );
-        cube.Transform.Position = position;
-        cube.Transform.Scale = size / 100.0f;
+        FractalObject.Clone( Root, position, Rotation.Identity, size / Size );
 
         // If we've reached the maximum depth, stop recursing
         if ( depth <= 0 ) return;
@@ -50,6 +46,6 @@ public sealed class FractalComponent : Component
     public void SpawnFractal()
     {
         // Spawn a fractal cube at the center of the map
-        SpawnFractal( Vector3.Zero, 100.0f, 3 );
+        SpawnFractal(Transform.Position, Size, Depth );
     }
 }
